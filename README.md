@@ -34,5 +34,5 @@ to run tests, after `npm i`, run `npm test`
 ##### Lab 4 documentation
 Today I worked with Tricia Sawyer and my key takeaway with out mock interview and code-reviews were that somethings are just more simple
 other things really need to be abstracted and modularized more. And lastly that being confident during an interview and just talking rather than being watched is probably the most valuable thing. 
-https://github.com/triciasawyer/api-server/pull/2
-https://github.com/ShadowDraco/api-server/pull/2
+[My pull request](https://github.com/triciasawyer/api-server/pull/2)
+[Her pull request](https://github.com/ShadowDraco/api-server/pull/2)
