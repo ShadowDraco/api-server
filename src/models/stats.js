@@ -6,14 +6,15 @@ module.exports = (sequelizeDatabase, DataTypes) => {
   return sequelizeDatabase.define("stats", {
     wins: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      defaultValue: 0,
     },
     losses: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      defaultValue: 0,
     },
     wl: {
       type: DataTypes.FLOAT,
+      defaultValue: 0.0,
     },
   });
 };
