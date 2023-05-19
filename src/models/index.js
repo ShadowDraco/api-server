@@ -5,9 +5,13 @@ const { Sequelize, DataTypes } = require("sequelize");
 // include schemas for player and stats
 const player = require("./player");
 const stats = require("./stats");
+const Collection = require("./collection");
 
-// get the database url
-const DATABASE_URL = process.env.DATABASE_URL;
+// get the database url - check if in testing environment or production
+const DATABASE_URL =
+  process.env.NODE_ENV === "test"
+    ? "sqlite::memory:"
+    : process.env.DATABASE_URL;
 
 // database singleton
 const sequelizeDatabase = new Sequelize(DATABASE_URL);
@@ -16,8 +20,14 @@ const sequelizeDatabase = new Sequelize(DATABASE_URL);
 const playerModel = player(sequelizeDatabase, DataTypes);
 const statsModel = stats(sequelizeDatabase, DataTypes);
 
+// create associations
+playerModel.hasOne(statsModel); // { statsId: }
+statsModel.belongsTo(playerModel); // { playerId: }
+
 module.exports = {
   sequelizeDatabase,
-  playerModel,
   statsModel,
+  playerModel,
+  Stats: new Collection(statsModel),
+  Player: new Collection(playerModel),
 };
