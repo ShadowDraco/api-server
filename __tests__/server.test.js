@@ -45,7 +45,7 @@ describe("Player Route", () => {
 
   test("Handles update player route", async () => {
     const response = await request.put("/player/1").send({ name: "tested" });
-    console.log(response.body);
+
     expect(response.status).toEqual(200);
     expect(response.body.name).toEqual("tested");
   });
@@ -54,14 +54,14 @@ describe("Player Route", () => {
     let response = await request.put("/stats/1/wins");
     console.log(response.body);
     expect(response.status).toEqual(200);
-    expect(response.body[0].wins).toEqual(1);
-    expect(response.body[0].wl).toEqual(1);
+    expect(response.body.wins).toEqual(1);
+    expect(response.body.wl).toEqual(1);
 
     response = await request.put("/stats/1/losses");
     console.log(response.body);
     expect(response.status).toEqual(200);
-    expect(response.body[0].losses).toEqual(1);
-    expect(response.body[0].wl).toEqual(1);
+    expect(response.body.losses).toEqual(1);
+    expect(response.body.wl).toEqual(1);
   });
 
   test("Handles get one stat route", async () => {
@@ -83,7 +83,9 @@ describe("Player Route", () => {
     const response = await request.delete("/stats/1");
 
     expect(response.status).toEqual(200);
-    expect(response.body).toEqual({ stats: [null, 1] });
+    expect(response.body.stats.losses).toEqual(0);
+    expect(response.body.stats.wins).toEqual(0);
+    expect(response.body.stats.wl).toEqual(0);
   });
 
   test("Handles delete player route", async () => {
