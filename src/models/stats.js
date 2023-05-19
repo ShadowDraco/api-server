@@ -18,3 +18,6 @@ module.exports = (sequelizeDatabase, DataTypes) => {
     },
   });
 };
+
+//bringing in seqdb to use for defining stats and the 3 things that you are defining within stats (wins, losses, wl)
+//

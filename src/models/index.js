@@ -31,3 +31,8 @@ module.exports = {
   Stats: new Collection(statsModel),
   Player: new Collection(playerModel),
 };
+
+
+//bringing in seqdb and player and stats, then bringing in the db url that we created into this to use
+//creating models to use elsewhere
+//exporting each model and the sequelizedb

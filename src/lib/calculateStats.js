@@ -12,3 +12,6 @@ module.exports = (stats, type) => {
         wl: stats.wins / (stats.losses + 1),
       };
 };
+
+
+//generating function to calculate the wl, wins, and losses

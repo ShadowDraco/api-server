@@ -28,3 +28,5 @@ module.exports = (sequelizeDatabase, DataTypes) => {
     },
   });
 };
+
+// bringing in seqdb and using it to create the route with things such as name, rank, and order.

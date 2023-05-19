@@ -40,3 +40,9 @@ const start = (port) => {
 };
 
 module.exports = { start, app };
+
+
+//foundation for creating routes and using them as well. Have get for home route, getting everything.
+// Also have app use to implement those routes that you created
+//listening port to connect to port
+//exporting start and app to be used elsewhere

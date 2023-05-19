@@ -63,3 +63,6 @@ router.delete("/:id", async (req, res, next) => {
 });
 
 module.exports = router;
+
+
+//implementing crud and using the assigne values such as id, player, and stats

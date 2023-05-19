@@ -18,3 +18,6 @@ sequelizeDatabase
   .catch((error) => {
     console.error(error);
   });
+
+   // Bringing in dotenv and the port from env, then bringing in sequelize db and
+  // using that to allow the db to connect, along with a catch error to catch any errors when starting up

@@ -77,3 +77,7 @@ router.delete("/:id", async (req, res, next) => {
 });
 
 module.exports = router;
+
+//assinging id, stats, and players to the models
+//includes crud, such as getting, deleting, posting, update
+//Creating routes with the crud for stats
