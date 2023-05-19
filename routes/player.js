@@ -1,3 +1,5 @@
+"use strict";
+
 const express = require("express");
 const router = express.Router();
 
@@ -46,8 +48,8 @@ router.get("/:id/with-stats", async (req, res, next) => {
 // Update one
 router.put("/:id", async (req, res, next) => {
   let id = req.params.id;
-  let updatedPlayer = Player.update(id, req.body);
-
+  let updatedPlayer = await Player.update(id, req.body);
+  console.log("\n\n\n", updatedPlayer);
   res.status(200).send(updatedPlayer);
 });
 

@@ -52,15 +52,14 @@ class Collection {
   // update data of one record
   async update(id, data) {
     try {
-      let updatedRecord = await this.model.update(data, {
-        where: { id: id },
-        returning: true,
-        plain: true,
-      });
+      if (!id) throw new Error("No id provided");
+      let record = await this.model.findOne({ where: { id } });
+      let updatedRecord = await record.update(data);
 
       return updatedRecord;
     } catch (error) {
       console.log("Error at collection update-\n", error);
+      return error;
     }
   }
 

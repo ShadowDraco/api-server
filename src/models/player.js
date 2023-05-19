@@ -11,6 +11,7 @@ module.exports = (sequelizeDatabase, DataTypes) => {
     rank: {
       type: DataTypes.INTEGER,
       defaultValue: 5,
+      allowNull: true,
     },
     order: {
       type: DataTypes.ENUM,
@@ -25,6 +26,7 @@ module.exports = (sequelizeDatabase, DataTypes) => {
         "Champion",
       ],
       defaultValue: "Bronze",
+      allowNull: true,
     },
   });
 };
