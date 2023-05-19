@@ -37,4 +37,4 @@ other things really need to be abstracted and modularized more. And lastly that 
 [My pull request](https://github.com/triciasawyer/api-server/pull/2)
 [Her pull request](https://github.com/ShadowDraco/api-server/pull/2)
 <hr>
-[Pull Request with finished LAB](https://github.com/ShadowDraco/api-server/pull/3)
+[Pull Request with finished LAB](https://github.com/ShadowDraco/api-server/pull/3) 
