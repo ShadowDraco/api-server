@@ -10,8 +10,8 @@ An express server with routes and a postgres database connection used as a REST-
 
 ### Links and Resources
 
-[Github Actions]()
-[Backend deployment]()
+[Github Actions](https://github.com/ShadowDraco/api-server/actions)
+[Backend deployment](https://frolic-api-server.onrender.com)
 
 #### `.env` requirements
 
